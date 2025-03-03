@@ -12,46 +12,40 @@
     <name>Airport Management Client</name>
     <description>Client application to interact with the Airport Management API</description>
 
-    <!-- Spring Boot Parent -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.1.0</version>
-        <relativePath/> <!-- Lookup parent from Maven repo -->
+        <relativePath/> 
     </parent>
 
     <properties>
-        <java.version>17</java.version> <!-- Ensure you're using Java 17 or higher -->
+        <java.version>17</java.version> 
     </properties>
 
     <dependencies>
-        <!-- Spring Boot WebClient (For HTTP Requests) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
-        <!-- Jackson for JSON Processing -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
 
-        <!-- Spring Boot Test Dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit for Unit Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
         </dependency>
 
-        <!-- Mockito for Mocking -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -61,13 +55,11 @@
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin (Required to Run Spring Boot) -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- Maven Compiler Plugin (Ensures Java 17 Compatibility) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -78,7 +70,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Exec Plugin (To Run Main Class from Terminal) -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
